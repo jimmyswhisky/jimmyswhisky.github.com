@@ -825,6 +825,7 @@ section #title .credits.right {
 }
 section #title .credits.center {
   float: center;
+  text-align: center;
 }
 
 @media print, screen and (max-width: 720px) {
