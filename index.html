@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+   
+    <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
     <script src="javascripts/respond.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -14,7 +16,30 @@
     <!--[if lt IE 8]>
     <link rel="stylesheet" href="stylesheets/ie.css">
     <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <style>
+  
+  /* tooltip styling */
+  .tooltip {
+    display:none;
+    height:105px;
+    padding:0px 0px 0px 0px;
+    width:300px;
+   
+  }
+
+   .whiskies {
+    cursor:pointer;
+    margin:0 1px;
+    line-height: 8px;
+  }
+  </style>
+
+
+
+
+
+
 
   </head>
   <body>
@@ -35,12 +60,21 @@
        
 
 
+
 <h3>Single Malt Scotch Whisky</h3>
 
 <p>
-Glenfiddich 12 Year Old <sup>1</sup> &nbsp; &#9734;<br>
-Old Pulteney 12 Year Old <sup>2</sup> <br>
-  
+<div class="whiskies" >Glenfiddich 12 Year Old <sup>1</sup> &nbsp; &#9734; </div>
+<div class="tooltip">
+  <img src="images/Glenfiddich12.jpg" alt="Smiley face"  width="300">
+</div>
+<br>
+<div class="whiskies" >Old Pulteney 12 Year Old <sup>2</sup> </div>
+<div class="tooltip">
+  <img src="images/old_pulteney12.jpg" alt="Smiley face"  width="300">
+</div>
+
+
 </p>
 
 <p></p>
@@ -55,6 +89,19 @@ Old Pulteney 12 Year Old <sup>2</sup> <br>
 
 </section>
 </div>
+<script>
+$(function () {
+$(".whiskies").tooltip({
+
+   // tweak the position
+   offset: [20, -1050],
+
+   // use the "slide" effect
+   effect: 'slide'
+
+// add dynamic plugin with optional configuration for bottom edge
+})});
+</script>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
