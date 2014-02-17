@@ -149,6 +149,7 @@ textarea {
  */
 body {
   margin: 0;
+  position: relative;
 }
 
 /* =============================================================================
@@ -827,6 +828,21 @@ section #title .credits.center {
   float: center;
   text-align: center;
   line-height: 38px;
+}
+section .number {
+  font-size: 100px;
+  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #ffcc00;
+  margin-top: 160px;
+  position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: -200;
+   overflow: hidden;
 }
 
 @media print, screen and (max-width: 720px) {
